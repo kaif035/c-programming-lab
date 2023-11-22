@@ -1,25 +1,23 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-    int limit, num, count, big;
+    int n,i;
+    double number,max=-99999999.0;
+    printf("Enter the number of elements :- ");
+    scanf("%d",&n);
 
-    printf("Enter the limit\n");
-    scanf("%d", &limit);
-
-    printf("Enter %d numbers\n", limit);
-    for(count = 1; count <= limit; count++)
+    printf("Enter %d number : \n",n);
+    for(i=0;i<n;++i)
     {
-        scanf("%d", &num);
-
-        if(num > big || count == 1)
-        {
-            big = num;
-        }
+        printf("Enter number %d: ",i+1);
+        scanf("%lf",&number);
+    if(number>max)
+    {
+        max=number;
+    }
     }
 
-    printf("Biggest number is %d\n", big);
-
+    printf("Maximum number is :%2.lf\n",max);
     return 0;
 }
-
